@@ -12,7 +12,7 @@ print("=== Simple Budget Calculator ===\n")
 # Get user input (always returns string)
 name = input("What's your name? ")
 print(f"Hello, {name}!")
-income_input = input("enter your monthly income")
+income_input = input("enter your monthly income: $")
 
 # Convert input strings to float
 income=float(income_input) #if there is a decimal part in the income convert to float and assign to income
@@ -29,8 +29,15 @@ print(f"\nThank you, {name}! Here is your budget summary:")
 
 #calculate savings
 savings = income - total_expenses
-print(f"Great, {name}! Based on the income and expenses you provided:")
+print(f"Based on the income and expenses you provided:")
 print(f"- Monthly Income: ${income}")
 print(f"- Monthly Expenses: ${total_expenses}")
 print(f"- Monthly Savings: ${savings}\n")  
 
+# Conditional check
+if remaining > 0:
+    print("✓ You're saving money!")
+elif remaining == 0:
+    print("⚠ You're breaking even.")
+else:
+    print("✗ You're overspending!")
