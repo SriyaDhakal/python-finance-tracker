@@ -30,6 +30,3 @@ print("Savings:", savings)  # Update and display expense
 expense = 3000.75
 print("Updated Expense:", expense)
 print("Updated Savings:", income - expense)    
-
-
-
